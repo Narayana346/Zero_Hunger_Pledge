@@ -161,9 +161,9 @@ return;
   let bodym =   'name: '+ name + '<br/> email :'+email + '<br/> phone :'+phone + '<br/> message :' + message
 
   Email.send({
-    To : 'maharanan14@gmail.com',
+    To : 'shreyasasahu208@gmail.com',
     From : email,
-    Subject : "Message send through Portfolio by :" +name,
+    Subject : "Message send through Zero Hunger Pledge by :" +name,
     Body : bodym
 }).then(
   message => 
