@@ -41,14 +41,15 @@ $(document).ready(function () {
 
 });
 
+
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Narayana Maharana";
-            $("#favicon").attr("href", "Assets/images/portfolio.png");
+            document.title = "IBM | Zero_Hunger_Pledge";
+            $("#favicon").attr("href", "Assets/images/logo.ico");
         }
         else {
-            document.title = "Come Back To Portfolio";
+            document.title = "Come Back To Zero_Hunger_Pledge";
             $("#favicon").attr("href", "Assets/images/Back.png");
         }
     });
@@ -56,155 +57,19 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["United Nations Sustainable Development (SDGs)", "Eliminate Hunger","Ensure food security","improve Nutrientation","Promote Sustainable Agriculture by 2023"],
+    strings: ["United Nations Sustainable Development (SDGs)",
+       "Eliminate Hunger",
+       "Ensure food security",
+       "improve Nutrientation",
+       "Promote Sustainable Agriculture by 2023"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
     backDelay: 500,
 });
-// <!-- typed js effect ends -->
+// <!-- typed js effect ends --> 
 
-async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-    response = await fetch("skills.json"):response = await fetch("./projects/projects.js")
-    const data = await response.json();
-    return data;
-}
- 
-
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info skills-card">
-                <img class="skills-card-img" src="Assets/images/Skills/${skill.icon}" alt="skill" width="50"/>
-                <span class="skills-card-name" >${skill.name}</span>
-              </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
-}
-
-
-/* JavaScript code for generating project cards */
-
-function showProjects(projects) {
-    let projectsContainer = document.querySelector("#projects .box-container");
-    let projectHTML = "";
-    projects.forEach(project => {
-        projectHTML += `
-        <div class="box project-card">
-
-      <img id="projectimage" draggable="false" src="Assets/images/projects/${project.image}.png" alt="project" />
-
-      <div>
-        <div class="tag">
-        <h3 class="project-title">${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p class="project-description">${project.desc}</p>
-          <br>
-       
-          <div class="btns">
-            <a href="${project.links.view}" class="btn project-deployed-link" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn project-github-link" target="_blank">Code <i class="fas fa-code"></i></a>
-            </div>
-
-             <div id="tech2" class="project-tech-stack"><img id="tech" src="https://skillicons.dev/icons?i=${project.stacks}" alt=""></div>
-
-        </div>
-      </div>
-    </div>`
-    });
-
-
-    
-    projectsContainer.innerHTML = projectHTML;
-
-
-    
-  let sendbtn = document.querySelector("#send");
-  sendbtn.addEventListener('click',function(e){
-    e.preventDefault()
-  let name = document.querySelector("input[name='name']").value;
-  let email = document.querySelector("input[name='email']").value;
-  let message = document.querySelector("textarea[name='message']").value;
-  let phone = document.querySelector("input[name='phone']").value;
-
-  if(email.length < 7){
-
-         
-
-
-  if(name.length == 0 || email.length == 0 || message.length == 0  || phone.length  == 0){
-
-     
-Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Please make sure to fill in all the required fields before submitting the form!',
-})
-return;
-  }
-
-  Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Invalid Email Address!',
-})
-  }
-
-
-  let bodym =   'name: '+ name + '<br/> email :'+email + '<br/> phone :'+phone + '<br/> message :' + message
-
-  Email.send({
-    To : 'shreyasasahu208@gmail.com',
-    From : email,
-    Subject : "Message send through Zero Hunger Pledge by :" +name,
-    Body : bodym
-}).then(
-  message => 
-  Swal.fire({
-  position: 'top-end',
-  icon: 'success',
-  title: 'Message sent successfully!',
-  showConfirmButton: false,
-  timer: 1500
-})
-);
-  document.querySelector("input[name='name']").value = "";
-  document.querySelector("input[name='email']").value = "";
-  document.querySelector("textarea[name='message']").value = "";
-  document.querySelector("input[name='phone']").value = "";
-
-  })
-
-
-
-
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-    const srtop = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        // reset: true
-    });
-
-    /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
-
-}
-
-fetchData().then(data => {
-    showSkills(data);
-});
-
-fetchData("projects").then(data => {
-    showProjects(data);
-});
+/* JavaScript code for signup and login cards */
 
 function toggleUserType() {
   const nameField = document.getElementById('name-field');

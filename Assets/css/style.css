@@ -457,7 +457,7 @@ header .navbar ul li a:hover {
 /* about media queries ends*/
 /* about section ends */
 
-/* skills section starts */
+/* signup  section starts */
 .skills2 {
   min-height: 90vh;
     background-size:cover ;
@@ -537,7 +537,10 @@ header .navbar ul li a:hover {
   }
   .skills2 .container {
     margin-top: 5px;
-    width: 100%;
+    width: 80%;
+  }
+  .skills .container .image-box {
+    display: inline;
   }
 
 
@@ -585,6 +588,15 @@ header .navbar ul li a:hover {
     font-size: 12px !important;
   }
 
+}
+@media only screen and ( max-width : 950px){
+  .skills2 .content .image-box {
+    display: none;
+  }
+  .skills2 .form-group{
+    width: 100%;
+
+  }
 }
 
 /* skills media queries ends*/
@@ -941,6 +953,7 @@ form .button-area {
   display: flex;
   float: right;
   flex-direction: row-reverse;
+  margin: 10px;
 }
 .button-area button {
   color: #fff;

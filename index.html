@@ -3,19 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Narayana_Maharana, portfolio, Narayana_Maharana, personal portfolio life codes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Narayana's Portfolio. Java Backend Developer" /> -->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./Assets/css/style.css"/>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
-
-
- 
     <!-- Favicon -->
-
     <link id='favicon' rel="shortcut icon" href="Assets/images/logo.ico" type="image/x-png">
     <title>IBM | Zero_Hunger_Pledge</title>
     <!-- <script src="https://unpkg.com/eva-icons"></script> -->
@@ -38,7 +31,7 @@
           <li><a class="nav-link contact" href="#contact">Contact</a></li>
           <li>
               <button id="resume-button-1">
-                  <a id="resume-link-1" href="Assets/Narayana_Maharana_Resume.pdf" download class="btn nav-link resume">
+                  <a id="resume-link-1" href="Assets/Narayana_Maharana_Resume.pdf"   download onclick="window.open('Assets/Narayana_Maharana_Resume.pdf')"class="btn nav-link resume">
                       <span>Contribution</span>
                       <i class="fas fa-chevron-right"></i>
                   </a>
@@ -139,11 +132,6 @@
       <div class="content">
           <div class="image-box">
               <img draggable="false" src="Assets/images/signup.jpg" alt="Sign Up">
-              <div class="button-area">
-                  <button type="button" id="toggle-user-type">
-                      Existing User <i class="fas fa-user-alt"></i>
-                  </button>
-              </div>
           </div>
           <form id="contact-form">
               <div class="form-group">
@@ -173,6 +161,11 @@
                       Sign Up <i class="fa fa-paper-plane"></i>
                   </button>
               </div>
+              <div class="button-area">
+                <button type="button" id="toggle-user-type">
+                    Existing User <i class="fas fa-user-alt"></i>
+                </button>
+            </div>
           </form>
       </div>
   </div>
@@ -228,7 +221,7 @@
   <div class="container">
     <div class="content">
       <div class="image-box">
-        <img draggable="false" src="Assets/images/projects/contact1.png" alt="">
+        <img draggable="false" src="Assets/images/contact1.png" alt="">
       </div>
     <form id="contact-form">
       
@@ -300,7 +293,7 @@
 
               <a id="contact-linkedin" href="https://www.linkedin.com/in/narayan-maharan" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
               <a id="contact-github" href="https://github.com/Narayana346" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-             
+            
           </div>
       </div>
   </div>
