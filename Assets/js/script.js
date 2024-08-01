@@ -206,6 +206,36 @@ fetchData("projects").then(data => {
     showProjects(data);
 });
 
+function toggleUserType() {
+  const nameField = document.getElementById('name-field');
+  const phoneField = document.getElementById('phone-field');
+  const confirmPasswordField = document.getElementById('confirm-password-field');
+  const sendButton = document.getElementById('send');
+  const toggleButton = document.getElementById('toggle-user-type');
+
+  if (toggleButton.innerText.includes('Existing User')) {
+      // Hide fields for existing users
+      nameField.style.display = 'none';
+      phoneField.style.display = 'none';
+      confirmPasswordField.style.display = 'none';
+
+      // Change button texts
+      sendButton.innerHTML = 'Login <i class="fa fa-paper-plane"></i>';
+      toggleButton.innerHTML = 'Create New User <i class="fas fa-user-alt"></i>';
+  } else {
+      // Show fields for new users
+      nameField.style.display = 'flex';
+      phoneField.style.display = 'flex';
+      confirmPasswordField.style.display = 'flex';
+
+      // Change button texts
+      sendButton.innerHTML = 'Sign Up <i class="fa fa-paper-plane"></i>';
+      toggleButton.innerHTML = 'Existing User <i class="fas fa-user-alt"></i>';
+  }
+}
+
+document.getElementById('toggle-user-type').addEventListener('click', toggleUserType);
+
 
 
 
