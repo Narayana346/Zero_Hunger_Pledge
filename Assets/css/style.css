@@ -483,8 +483,8 @@ header .navbar ul li a:hover {
   background: rgba(0, 0, 0, 0.652);
   color: #fff;
   border-radius: 1rem;
-  padding: 2rem;
-  width: 90%;
+  padding: 1rem;
+  width: 60%;
   margin: auto;
   margin-top: 2rem;
 }
@@ -606,7 +606,7 @@ header .navbar ul li a:hover {
   padding: 1rem;
 }
 .work .heading span {
-  /* color: rgb(255, 230, 0); */
+  color: rgb(255, 230, 0);
 }
 .work .box-container {
   display: flex;
@@ -630,7 +630,7 @@ header .navbar ul li a:hover {
 }
 .work .box-container .box #projectimage {
   width: 97%;
-  height: 97%;
+  height: auto;
   border-radius: 20px;
 }
 .work .box-container .box .content {
